@@ -2,7 +2,7 @@ const startButton = document.getElementById("start-button")
 const instructions = document.getElementById("instructions-text")
 const mainPlayArea = document.getElementById("main-play-area")
 const shooter = document.getElementById("player-controlled-shooter")
-const monsterImgs = ['https://ibb.co/yh3CqXq']
+const monsterImgs = images/bear.png
 const scoreCounter = document.querySelector('#score span')
 
 let justice
@@ -79,7 +79,7 @@ function moveLaser(laser) {
     let monsters = document.querySelectorAll(".monster")
     monsters.forEach(monster => {
       if (checkLaserCollision(laser, monster)) {
-        let explosion = new Audio('https://vocaroo.com/embed/1g82NJyjNrNg?autoplay=0')
+        let explosion = new Audio('audio/scream.mp3')
         explosion.play()
         monster.src = "images/explosion.png"
         monster.classList.remove("monster")
